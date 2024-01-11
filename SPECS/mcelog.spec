@@ -1,7 +1,7 @@
 Summary:	Tool to translate x86-64 CPU Machine Check Exception data
 Name:		mcelog
-Version:	189
-Release:	0%{?dist}
+Version:	194
+Release:	1%{?dist}
 Epoch:		3
 Group:		System Environment/Base
 License:	GPLv2
@@ -66,6 +66,10 @@ install -p -m644 mcelog*.5 $RPM_BUILD_ROOT/%{_mandir}/man5/
 %{_mandir}/*/*
 
 %changelog
+* Thu Jun  8 2023 Prarit Bhargava <prarit@redhat.com> - 3:194.1
+- Add tests
+* Mon Jun  5 2023 Prarit Bhargava <prarit@redhat.com> - 3:194.0
+- Add support for EMR
 * Fri Sep  2 2022 Prarit Bhargava <prarit@redhat.com> - 3:189-0
 - Add support for RPL-P, RPL-S, ADL-N
 * Fri Jun 24 2022 Prarit Bhargava <prarit@redhat.com> - 3:182-1
