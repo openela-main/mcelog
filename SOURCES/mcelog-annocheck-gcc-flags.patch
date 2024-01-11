@@ -1,0 +1,19 @@
+diff --git a/Makefile b/Makefile
+index d28d17a24aea..c6603251be31 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,4 +1,5 @@
+ CFLAGS := -g -Os
++LDFLAGS = -Wl,-z,now -pie
+ prefix := /usr
+ etcprefix :=
+ MANDIR := ${prefix}/share/man
+@@ -82,7 +83,7 @@ dbquery: db.o dbquery.o memutil.o
+ depend: .depend
+ 
+ %.o: %.c
+-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(WARNINGS) $(ADD_DEFINES) -o $@ $<
++	$(CC) $(LDFLAGS) -c $(CFLAGS) $(CPPFLAGS) $(WARNINGS) $(ADD_DEFINES) -o $@ $<
+ 
+ version.tmp: FORCE
+ 	( printf "char version[] = \"" ; 			\
