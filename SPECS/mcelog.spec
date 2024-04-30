@@ -1,6 +1,6 @@
 Summary:	Tool to translate x86-64 CPU Machine Check Exception data
 Name:		mcelog
-Version:	194
+Version:	195
 Release:	0%{?dist}
 Epoch:		3
 License:	GPLv2
@@ -63,6 +63,9 @@ install -p -m644 mcelog*.5 $RPM_BUILD_ROOT/%{_mandir}/man5/
 %{_mandir}/*/*
 
 %changelog
+* Mon Oct 16 2022 Prarit Bhargava <prarit@redhat.com> - 3:195.0
+* Update to v195
+
 * Mon Jun  5 2022 Prarit Bhargava <prarit@redhat.com> - 3:194-0
 * Add support for EMR and SPR
 
