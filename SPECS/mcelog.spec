@@ -1,7 +1,7 @@
 Summary:	Tool to translate x86-64 CPU Machine Check Exception data
 Name:		mcelog
-Version:	198
-Release:	0%{?dist}
+Version:	201
+Release:	1%{?dist}
 Epoch:		3
 License:	GPLv2
 URL:		https://github.com/andikleen/mcelog
@@ -63,24 +63,28 @@ install -p -m644 mcelog*.5 $RPM_BUILD_ROOT/%{_mandir}/man5/
 %{_mandir}/*/*
 
 %changelog
-* Thu Apr  4 2023 Prarit Bhargava <prarit@redhat.com> - 3:198.0
-* Update to v198
-* cleanup changelog
+* Wed Dec 4 2024 Jakub Čajka <jcajka@redhat.com> - 3:201-1
+- Update to v201
+- Resolves: RHEL-47462
+
+* Thu Apr  4 2024 Prarit Bhargava <prarit@redhat.com> - 3:198.0
+- Update to v198
+- cleanup changelog
 
 * Mon Oct 16 2023 Prarit Bhargava <prarit@redhat.com> - 3:195.0
-* Update to v195
+- Update to v195
 
 * Mon Jun  5 2023 Prarit Bhargava <prarit@redhat.com> - 3:194-0
-* Add support for EMR and SPR
+- Add support for EMR and SPR
 
 * Fri Sep  2 2022 Prarit Bhargava <prarit@redhat.com> - 3:189-0
-* Add support for RPL-P, RPL-S, ADL-N
+- Add support for RPL-P, RPL-S, ADL-N
 
 * Tue Jun 21 2022 Prarit Bhargava <prarit@redhat.com> - 3:182-3
-* Also update local mcelog.conf
+- Also update local mcelog.conf
 
 * Wed Jun 15 2022 Prarit Bhargava <prarit@redhat.com> - 3:182-2
-* Bump NVR to kick build
+- Bump NVR to kick build
 
 * Mon Jun 13 2022 Prarit Bhargava <prarit@redhat.com> - 3:182-1
 - Change CE threshhold from 10/day to 2/day [2094574]
